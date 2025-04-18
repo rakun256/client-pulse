@@ -1,49 +1,237 @@
-.container {
+.mainLoginWrapper {
   display: flex;
   height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+
+.errorText {
+  color: var(--color-danger);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.leftFormSection {
+  width: 50%;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--color-bg);
 }
 
-.form {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  width: 100%;
+.formContainer {
+  width: 80%;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
+.loginTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
-.input {
-  width: 100%;
+.loginSubtitle {
+  font-size: 1rem;
+  color: var(--color-subtext);
+}
+
+.inputField {
   padding: 0.75rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  font-size: 1rem;
+  background-color: white;
+  color: var(--color-text);
 }
 
-.button {
-  width: 100%;
+.signInButton {
   padding: 0.75rem;
   background-color: var(--color-primary);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-.error {
-  color: var(--color-danger);
+.signInButton:hover {
+  background-color: var(--color-secondary);
+}
+
+.signUpPrompt {
   font-size: 0.9rem;
-  margin-top: 0.5rem;
+  color: var(--color-subtext);
+}
+
+.signUpPrompt span {
+  color: var(--color-accent);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.divider {
   text-align: center;
+  position: relative;
+  margin: 1rem 0;
+  color: var(--color-subtext);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  padding: 0 1rem;
+  background: var(--color-bg);
+}
+
+.rightImageSection {
+  width: 50%;
+  position: relative;
+}
+
+.imagePanelContainer {
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/main.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageOverlayPanel {
+  width: 80%;
+  padding: 2rem;
+  color: var(--color-bg);
+  text-align: center;
+  border-radius: 16px;
+}
+
+.logoPlaceholder {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.mobileBrandTitle {
+  display: none;
+}
+
+.brandTitle {
+  margin: 1rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandClient {
+  font-weight: 400;
+  color: var(--color-bg);
+}
+
+.brandPulse {
+  font-weight: 800;
+  color: var(--color-bg);
+}
+
+.brandDescription {
+  font-size: 1.25rem;
+  color: var(--color-bg);
+}
+
+.logoImage {
+  width: 200px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .mainLoginWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+    padding: 2rem 1rem;
+  }
+
+  .leftFormSection {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formContainer {
+    width: 100%;
+    max-width: 360px;
+    padding: 0;
+    gap: 1rem;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .mobileBrandTitle {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brandClient {
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+
+  .brandPulse {
+    font-weight: 700;
+    color: var(--color-secondary);
+  }
+
+  .loginTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  .loginSubtitle {
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--color-subtext);
+    margin-bottom: 1rem;
+  }
+
+  .divider span {
+    background-color: var(--color-bg);
+  }
+
+  .rightImageSection {
+    display: none;
+  }
+
+  .logoPlaceholder {
+    display: none;
+  }
 }
