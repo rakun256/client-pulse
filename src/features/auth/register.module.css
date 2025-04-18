@@ -1,0 +1,213 @@
+.mainLoginWrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+  }
+  
+  .leftFormSection {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+    padding: 1rem; /* daha kompakt */
+  }
+  
+  .formContainer {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* boşluk azaltıldı */
+  }
+  
+  .loginTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .loginSubtitle {
+    font-size: 0.95rem;
+    color: var(--color-subtext);
+    margin-bottom: 1rem;
+  }
+  
+  .inputField {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: white;
+    color: var(--color-text);
+  }
+  
+  .signInButton {
+    padding: 0.65rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signInButton:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .signUpPrompt {
+    font-size: 0.85rem;
+    color: var(--color-subtext);
+  }
+  
+  .signUpPrompt span {
+    color: var(--color-accent);
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .divider {
+    text-align: center;
+    position: relative;
+    margin: 0.75rem 0;
+    color: var(--color-subtext);
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: var(--color-border);
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .divider span {
+    padding: 0 1rem;
+    background: var(--color-bg);
+  }
+  
+  .errorText {
+    color: var(--color-danger);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    text-align: center;
+  }
+  
+  .rightImageSection {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imagePanelContainer {
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/main.png") center center / cover no-repeat;
+  }
+  
+  .imageOverlayPanel {
+    width: 80%;
+    padding: 1.5rem;
+    color: var(--color-bg);
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .logoPlaceholder {
+    margin-bottom: 0.5rem;
+  }
+  
+  .brandTitle {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .brandClient {
+    font-weight: 400;
+    color: var(--color-bg);
+  }
+  
+  .brandPulse {
+    font-weight: 700;
+    color: var(--color-bg);
+  }
+  
+  .brandDescription {
+    font-size: 1rem;
+    color: var(--color-bg);
+  }
+  
+  .logoImage {
+    width: 160px;
+    height: auto;
+  }
+  
+  .mobileBrandTitle {
+    display: none;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .mainLoginWrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    .leftFormSection {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .formContainer {
+      width: 100%;
+      max-width: 360px;
+      background: transparent;
+      border-radius: 0;
+      gap: 0.75rem;
+    }
+  
+    .mobileBrandTitle {
+      display: flex;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+  
+    .brandClient {
+      color: var(--color-primary);
+    }
+  
+    .brandPulse {
+      color: var(--color-secondary);
+    }
+  
+    .rightImageSection {
+      display: none;
+    }
+  
+    .logoPlaceholder {
+      display: none;
+    }
+  }
+  

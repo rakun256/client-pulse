@@ -76,7 +76,7 @@ const LoginPage = () => {
             tabIndex={3}
             disabled={loading}
           >
-            {loading ? "Signing In..." : "Sign In"}
+            {loading ? "Loging In..." : "Log In"}
           </button>
 
           {(localError || backendError) && (
@@ -88,7 +88,8 @@ const LoginPage = () => {
           </div>
 
           <p className={styles.signUpPrompt}>
-            Don’t have an account? <span>Sign Up</span>
+            Don’t have an account?{" "}
+            <span onClick={() => navigate("/register")}>Register.</span>
           </p>
         </form>
       </div>

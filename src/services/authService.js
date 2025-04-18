@@ -21,8 +21,27 @@ const login = async ({ email, password }) => {
   });
 };
 
+const register = async (data) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (data.email === 'existing@clientpulse.app') {
+        reject(new Error('User with this email already exists.'));
+      } else {
+        resolve({
+          user: {
+            email: data.email,
+            name: `${data.firstname} ${data.lastname}`,
+            role: 'USER',
+          },
+          token: fakeToken,
+        });
+      }
+    }, 800);
+  });
+};
+
 const authService = {
-  login,
+  login, register,
 };
 
 export default authService;
