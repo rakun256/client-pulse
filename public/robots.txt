@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for ClientPulse Admin Panel
 User-agent: *
-Disallow:
+Disallow: /private/
+Disallow: /api/
+Allow: /

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ClientPulse",
+  "name": "ClientPulse - AI-Powered Customer Insight Dashboard for Banks",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#004e64",
+  "background_color": "#f6f9fc",
+  "description": "ClientPulse is a real-time AI platform for analyzing customer behavior and detecting early risk signals in banking."
 }
