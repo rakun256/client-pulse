@@ -30,7 +30,6 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // frontend validation
     if (!formData.email.trim() || !formData.password.trim()) {
       setLocalError("Please fill in all required fields.");
       return;
