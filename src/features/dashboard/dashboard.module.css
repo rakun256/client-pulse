@@ -1,0 +1,25 @@
+.container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .cardGrid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  
+  .bottomGrid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-subtext);
+  }
+  

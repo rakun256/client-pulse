@@ -1,0 +1,57 @@
+.container {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .level {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .level[data-level="Yüksek"] {
+    background-color: var(--color-danger);
+  }
+  
+  .level[data-level="Orta"] {
+    background-color: var(--color-warning);
+    color: var(--color-text);
+  }
+  
+  .level[data-level="Düşük"] {
+    background-color: var(--color-success);
+  }
+  
+  .message {
+    font-size: 14px;
+    color: var(--color-subtext);
+    margin: 0;
+  }
+  
