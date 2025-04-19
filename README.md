@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# ClientPulse – Admin Panel Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ClientPulse is a customer behavior monitoring and recommendation system. This admin panel enables teams to manage customers, view behavior-based alerts, and apply AI-driven suggestions through a modern and clean interface.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tech Stack
 
-### `npm start`
+- **React.js** – Modular frontend architecture
+- **Redux Toolkit** – Global state management
+- **CSS Modules** – Component-level styling with theme variables
+- **React Router** – SPA navigation
+- **Charting** – Prepared for integration (ApexCharts, Recharts)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Features
 
-### `npm test`
+- **Dashboard**: Overview of customers, active users, alerts, and insights
+- **Customers**: View list, detailed profiles, risk scores, and export options
+- **Suggestions**: Filter, search, and manage AI/Expert suggestions
+- **Reports**: Visual summaries of system usage and recommendation data
+- **Settings**: User preferences, language, security, notifications, and theme
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+/src
+  ├── pages/              # Page-level views
+  ├── redux/              # Slices, services, API configs
+  │   ├── slices/
+  │   ├── services/
+  │   └── mocks/
+  ├── components/         # Reusable UI components
+  └── styles/             # Global and module CSS
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧪 Getting Started
 
-### `npm run eject`
+```bash
+npm install
+npm run start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Runs the development server at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ✨ Design Language
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Fully responsive layout
+- Theme support using `:root` variables
+- Accessible forms and interactions
+- Component-based structure for scalability
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📌 Upcoming Improvements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Role-based authentication integration
+- Analytics & charts for admin insights
+- Performance optimizations & lazy loading
+- Internationalization support
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 ClientPulse
