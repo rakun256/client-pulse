@@ -1,0 +1,164 @@
+.container {
+  padding: 24px;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.loading {
+  font-size: 14px;
+  color: var(--color-subtext);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 2;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.date {
+  font-size: 12px;
+  color: var(--color-subtext);
+  margin: 0;
+}
+
+.content {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.source {
+  font-size: 12px;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.status {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pending {
+  background-color: #fff7e6;
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning);
+}
+
+.done {
+  background-color: #e6f4ea;
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.filterBtn {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: var(--color-bg);
+}
+
+.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.dateInputs {
+  display: flex;
+  gap: 8px;
+}
+
+.dateInputs input {
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.searchInput {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 13px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.noResult {
+  font-size: 14px;
+  color: var(--color-subtext);
+  text-align: center;
+  margin-top: 32px;
+}

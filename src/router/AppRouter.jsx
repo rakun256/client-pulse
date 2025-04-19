@@ -15,6 +15,7 @@ import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import PrivateRoute from "./PrivateRoute";
 import RegisterPage from '../features/auth/RegisterPage'; 
+import SettingsPage from "../features/settings/SettingsPage";
 
 const AppRouter = () => {
   return (
@@ -50,6 +51,7 @@ const AppRouter = () => {
           <Route path="customers/:id" element={<CustomerDetailPage />} />
           <Route path="suggestions" element={<SuggestionsPage />} />
           <Route path="reports" element={<ReportsPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/dashboard" replace />} />

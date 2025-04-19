@@ -1,0 +1,43 @@
+export const mockCustomers = [
+    {
+      id: 1,
+      name: "Ahmet Yılmaz",
+      email: "ahmet@example.com",
+      avatarUrl: "https://randomuser.me/api/portraits/men/10.jpg",
+      registeredAt: "2024-12-05",
+      riskScore: 72,
+      alerts: { critical: 2, total: 5 },
+      suggestions: { pending: 60, pendingCount: 3, applied: 40 },
+    },
+    {
+      id: 2,
+      name: "Zeynep Demir",
+      email: "zeynep@example.com",
+      avatarUrl: "https://randomuser.me/api/portraits/women/15.jpg",
+      registeredAt: "2024-11-21",
+      riskScore: 45,
+      alerts: { critical: 1, total: 2 },
+      suggestions: { pending: 30, pendingCount: 1, applied: 70 },
+    },
+    {
+      id: 3,
+      name: "Mert Kaya",
+      email: "mert@example.com",
+      avatarUrl: "https://randomuser.me/api/portraits/men/22.jpg",
+      registeredAt: "2024-10-03",
+      riskScore: 88,
+      alerts: { critical: 4, total: 6 },
+      suggestions: { pending: 90, pendingCount: 5, applied: 10 },
+    },
+    {
+      id: 4,
+      name: "Ali Koç",
+      email: "ali@example.com",
+      avatarUrl: "https://randomuser.me/api/portraits/men/48.jpg",
+      registeredAt: "2024-09-12",
+      riskScore: 23,
+      alerts: { critical: 0, total: 1 },
+      suggestions: { pending: 10, pendingCount: 1, applied: 90 },
+    },
+  ]
+  

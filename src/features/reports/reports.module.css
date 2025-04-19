@@ -1,0 +1,51 @@
+.container {
+    padding: 24px;
+  }
+  
+  .heading {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--color-text);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .label {
+    font-size: 14px;
+    color: var(--color-subtext);
+    margin-bottom: 8px;
+  }
+  
+  .value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+  }
+  
+  .footerNote {
+    margin-top: 32px;
+    font-size: 12px;
+    color: var(--color-subtext);
+    text-align: center;
+  }
+  

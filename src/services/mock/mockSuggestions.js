@@ -1,0 +1,43 @@
+export const mockSuggestions = [
+    {
+      id: 101,
+      customerId: 1,
+      customerName: "Ahmet Yılmaz",
+      customerAvatar: "https://randomuser.me/api/portraits/men/10.jpg",
+      suggestion: "Müşteri aktivitesi azaldı, birebir iletişim önerin.",
+      status: "Beklemede",
+      source: "AI",
+      createdAt: "2025-04-15T10:30:00",
+    },
+    {
+      id: 102,
+      customerId: 2,
+      customerName: "Zeynep Demir",
+      customerAvatar: "https://randomuser.me/api/portraits/women/15.jpg",
+      suggestion: "Geri bildirim alın, önerilen içerik sunun.",
+      status: "Uygulandı",
+      source: "Uzman",
+      createdAt: "2025-04-10T14:00:00",
+    },
+    {
+      id: 103,
+      customerId: 3,
+      customerName: "Mert Kaya",
+      customerAvatar: "https://randomuser.me/api/portraits/men/22.jpg",
+      suggestion: "Etkinlik daveti gönderin, tekrar etkileşime geçirin.",
+      status: "Beklemede",
+      source: "AI",
+      createdAt: "2025-04-17T08:45:00",
+    },
+    {
+      id: 104,
+      customerId: 4,
+      customerName: "Ali Koç",
+      customerAvatar: "https://randomuser.me/api/portraits/men/48.jpg",
+      suggestion: "Yeni içerik önerisi sunulmalı.",
+      status: "Uygulandı",
+      source: "Uzman",
+      createdAt: "2025-04-13T09:20:00",
+    },
+  ]
+  

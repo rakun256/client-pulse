@@ -4,6 +4,7 @@ import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import dashboardReducer from "../features/dashboard/dashboardSlice";
 import customersReducer from "../features/customers/customerSlice"
+import suggestionsReducer from "../features/suggestions/suggestionSlice";
 
 const persistConfig = {
   key: 'auth',
@@ -17,6 +18,7 @@ export const store = configureStore({
     auth: persistedAuthReducer,
     dashboard: dashboardReducer,
     customers: customersReducer,
+    suggestions: suggestionsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
