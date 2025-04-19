@@ -8,12 +8,21 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import styles from "./mainLayout.module.css";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../features/auth/authSlice";
 
 const MainLayout = () => {
   const user = useSelector((state) => state.auth.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
 
   const menuItems = [
     { label: "Dashboard", to: "/dashboard", icon: <MdDashboard /> },
@@ -21,7 +30,7 @@ const MainLayout = () => {
     { label: "Suggestions", to: "/suggestions", icon: <FaLightbulb /> },
     { label: "Reports", to: "/reports", icon: <FaChartLine /> },
     { label: "Settings", to: "/settings", icon: <FiSettings /> },
-    { label: "Logout", to: "/logout", icon: <FaSignOutAlt /> },
+    { label: "Logout", action: "logout", icon: <FaSignOutAlt /> },
   ];
 
   return (
@@ -44,18 +53,31 @@ const MainLayout = () => {
           </div>
         </div>
         <nav className={styles.nav}>
-          {menuItems.map(({ label, to, icon }) => (
-            <NavLink
-              to={to}
-              key={label}
-              className={({ isActive }) =>
-                isActive ? `${styles.navItem} ${styles.active}` : styles.navItem
-              }
-            >
-              <span className={styles.icon}>{icon}</span>
-              <span className={styles.label}>{label}</span>
-            </NavLink>
-          ))}
+          {menuItems.map(({ label, to, icon, action }) =>
+            action === "logout" ? (
+              <div
+                key={label}
+                className={styles.navItem}
+                onClick={handleLogout}
+              >
+                <span className={styles.icon}>{icon}</span>
+                <span className={styles.label}>{label}</span>
+              </div>
+            ) : (
+              <NavLink
+                to={to}
+                key={label}
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.navItem} ${styles.active}`
+                    : styles.navItem
+                }
+              >
+                <span className={styles.icon}>{icon}</span>
+                <span className={styles.label}>{label}</span>
+              </NavLink>
+            )
+          )}
         </nav>
       </aside>
 
