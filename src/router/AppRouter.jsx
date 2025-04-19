@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 import LoginPage from "../features/auth/LoginPage";
 import DashboardPage from "../features/dashboard/DashboardPage";
@@ -16,6 +15,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import PrivateRoute from "./PrivateRoute";
 import RegisterPage from '../features/auth/RegisterPage'; 
 import SettingsPage from "../features/settings/SettingsPage";
+import NotFound from "../components/NotFound/NotFound";
 
 const AppRouter = () => {
   return (
@@ -54,7 +54,7 @@ const AppRouter = () => {
           <Route path="settings" element={<SettingsPage />} />
         </Route>
 
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

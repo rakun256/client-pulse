@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+    padding: 80px 24px;
+    color: var(--color-text);
+  }
+  
+  .link {
+    margin-top: 24px;
+    display: inline-block;
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
