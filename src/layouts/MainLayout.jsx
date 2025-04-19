@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { MdDashboard, MdReportProblem } from "react-icons/md";
+import { MdDashboard } from "react-icons/md";
 import {
   FaUsers,
   FaLightbulb,
@@ -18,7 +18,6 @@ const MainLayout = () => {
   const menuItems = [
     { label: "Dashboard", to: "/dashboard", icon: <MdDashboard /> },
     { label: "Customers", to: "/customers", icon: <FaUsers /> },
-    { label: "Alerts", to: "/alerts", icon: <MdReportProblem /> },
     { label: "Suggestions", to: "/suggestions", icon: <FaLightbulb /> },
     { label: "Reports", to: "/reports", icon: <FaChartLine /> },
     { label: "Settings", to: "/settings", icon: <FiSettings /> },

@@ -17,20 +17,52 @@ export default function CustomerListPage() {
     <div className={styles.container}>
       <h2 className={styles.heading}>Müşteri Listesi</h2>
       {loading ? (
-        <p>Yükleniyor...</p>
+        <p className={styles.loading}>Yükleniyor...</p>
       ) : (
-        <ul className={styles.list}>
-          {list.map((c) => (
-            <li
-              key={c.id}
-              className={styles.item}
-              onClick={() => navigate(`/customers/${c.id}`)}
-            >
-              <p className={styles.name}>{c.name}</p>
-              <p className={styles.email}>{c.email}</p>
-            </li>
+        <div className={styles.table}>
+          {list.map((customer) => (
+            <div key={customer.id} className={styles.row}>
+              {/* Client */}
+              <div className={styles.client}>
+                <img src={customer.avatarUrl} alt="avatar" className={styles.avatar} />
+                <div>
+                  <p className={styles.name}>{customer.name}</p>
+                  <p className={styles.email}>{customer.email}</p>
+                </div>
+              </div>
+
+              {/* Risk */}
+              <div className={styles.risk}>
+                <p className={styles.label}>Risk Skoru</p>
+                <div className={styles.scoreBar}>
+                  <div
+                    className={styles.scoreFill}
+                    style={{ width: `${customer.riskScore}%` }}
+                  />
+                </div>
+                <p className={styles.score}>{customer.riskScore}</p>
+              </div>
+
+              {/* Alerts */}
+              <div className={styles.alerts}>
+                <p className={styles.label}>Alertler</p>
+                <p>{customer.alerts.critical} kritik / {customer.alerts.total} toplam</p>
+              </div>
+
+              {/* Suggestions */}
+              <div className={styles.suggestions}>
+                <p className={styles.label}>Öneriler</p>
+                <p>{customer.suggestions.pending}% ({customer.suggestions.pendingCount}) bekleyen</p>
+              </div>
+
+              {/* Actions */}
+              <div className={styles.actions}>
+                <button className={styles.btn} onClick={() => navigate(`/customers/${customer.id}`)}>Detay</button>
+                <button className={styles.btnSecondary}>Grafik</button>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   )
